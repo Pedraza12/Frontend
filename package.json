@@ -1,0 +1,44 @@
+{
+  "name": "proyectwin-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "playwright test",
+    "test:e2e": "node e2e/run-aislado.mjs",
+    "test:unit": "vitest run",
+    "preview": "vite preview",
+    "test:e2e:aislado": "node e2e/run-aislado.mjs",
+    "test:agentes": "playwright test e2e/agentes.spec.js --workers=4",
+    "test:agentes:acciones": "node e2e/run-agentes-acciones.mjs",
+    "test:agentes:cobertura": "playwright test e2e/agentes/cobertura.spec.js --workers=4",
+    "test:agentes:negativos": "playwright test e2e/agentes/negativos.spec.js --workers=4",
+    "test:volumen": "node e2e/run-volumen.mjs",
+    "test:full": "node e2e/run-full.mjs"
+  },
+  "dependencies": {
+    "phosphor-react": "^1.4.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.15.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.6",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "jsdom": "^29.1.1",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.11"
+  }
+}
